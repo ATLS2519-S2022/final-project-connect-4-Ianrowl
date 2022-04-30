@@ -37,7 +37,7 @@ public class AlphabetaPlayer implements Player {
     		for(int i = 0; i < 7; i++) {//Cycle through each column
     			if (board.isValidMove(i)) {//If the move in this column is valid, then
 	    			board.move(i, id);//Make the move to this column
-	    			int score = alphabeta(board, maxDepth -1, alpha, beta, false, arb);//Calculate the score by running the minimax
+	    			int score = alphabeta(board, maxDepth, alpha, beta, false, arb);//Calculate the score by running the minimax
 	    			board.unmove(i, id);//Reverse the move
 	    			if(score > highScore) {//If this score is greater than the highScore variable
 	    				highScore = score;//Then the highScore equals this current score
